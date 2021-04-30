@@ -5,12 +5,12 @@ const { logout } = require('../controllers/logout');
 
 router.use('/signin', require('./signin'));
 router.use('/signup', require('./signup'));
+router.use('/posts', require('./posts'));
 
 router.use(auth);
 
 router.use('/signout', logout);
 router.use('/users', require('./users'));
-router.use('/posts', require('./posts'));
 router.use('/comments', require('./comments'));
 
 router.use(() => {
